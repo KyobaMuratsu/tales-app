@@ -1,10 +1,9 @@
 body {
- background-color: black;
+    background-color: white;
 }
 
-h1{
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.Header{
+    color:black;
+    display: flex;
+    justify-content: center;
 }
