@@ -2,9 +2,10 @@ import React from "react";
 
 import Header from '../layout/Header'
 
-function Login() {
-   return(
+function Register() {
+   <div>
         <Header/>
-)}
+   </div> 
+}
 
-export default Login
+export default Register
