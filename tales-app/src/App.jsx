@@ -1,9 +1,18 @@
 import React from "react";
-import './App.css';
-import Header from "./components/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './style/App.css';
+import Login from "./pages/Login";
 
-export default param => (
-        <div className="">
-            <Header/>
-        </div>
-);
+function App(){ 
+    return (
+        <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Login/>}>
+              
+              </Route>
+          </Routes>
+        </BrowserRouter>
+      );
+}
+
+export default App
