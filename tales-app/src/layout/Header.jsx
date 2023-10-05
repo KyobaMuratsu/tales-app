@@ -1,8 +1,13 @@
 import React from "react";
 
+const nicolas = 'nicolas';
+
 function Header() {
-    return(   
-    <h1 className="Header">Bem-vindo</h1>
+    return( 
+    <header>  
+    <h1 className="Header">nicolas</h1>
+
+    </header>
     );
 }
 
