@@ -1,6 +1,6 @@
 body{
-    background-image: url('../assets/bkg.jpg');
     background-color: aqua;
+    background-image: url('../assets/bkg.jpg');
     opacity: 1;
 }
 
@@ -24,7 +24,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 6px;
+    row-gap: 10px;
     width: fit-content;
     height: fit-content;
     padding: 1% 2% 1% 2%;
@@ -50,13 +50,25 @@ body{
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
+    letter-spacing: -0.1px
+}
+
+.text-url{
+    text-align: center;
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
     line-height: 161.5%; /* 32.3px */
     letter-spacing: -0.1px
 }
 
 .textbox{
     background-color: #D9D9D9;
-    border-radius: 4%;
+    border-radius: 50px;
+    height: 30px;
     width: 80%;
     align-content: center;
 }
@@ -69,8 +81,32 @@ body{
 
 .login-button{
     background-color: #002B5B;
-    padding: 3% 0 0 0;
-    margin-top: 1%;
-    width: 40%;
+    color: white;
+    height: 35px;
+    width: 60%;
     border-radius: 15px;
+}
+
+.google-login-button {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: #444;
+    width: 70%;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+
+.google-text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.google-login-button-icon {
+    background: no-repeat;
+    width: 42px;
+    height: 42px;
 }
