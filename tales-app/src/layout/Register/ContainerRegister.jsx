@@ -1,6 +1,7 @@
 import React from "react";
 import '../../style/Login.css';
 import GoogleLogo from '../../assets/GoogleLogo.png';
+import GoogleButton from "../Components/GoogleButton";
 import { Link } from "react-router-dom";
 
 function Container() {
@@ -16,10 +17,7 @@ function Container() {
                 <input type="password" name="Senha-login" id="login-senha" className="textbox" />
                 <input type="button" name="Login" id="submit" className="login-button" value="Registrar"/>
                 <p className="text">OU</p>
-                <button name="Login" id="submit" className="google-login-button">
-                    <img src={GoogleLogo} alt="googlelogo" className="google-login-button-icon"/>
-                    <p className="google-text">Sign in with Google</p>
-                </button>
+                <GoogleButton></GoogleButton>
                 <p className="text">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
                 </p>
             </div>

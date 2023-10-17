@@ -3,6 +3,7 @@ body{
     width: 100vw;
 
 }
+
 #root{
     background-image: url('../assets/background2.jpg');
     background-repeat: no-repeat;
@@ -105,6 +106,7 @@ body{
     box-shadow: 1px 1px 1px grey;
     white-space: nowrap;
     justify-content: space-around;
+    cursor: pointer;
 }
 
 .google-text{
