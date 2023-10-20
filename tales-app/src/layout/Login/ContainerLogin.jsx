@@ -1,7 +1,6 @@
 import React from "react";
 import '../../style//Login.css';
-import GoogleLogo from '../../assets/GoogleLogo.png';
-import GoogleButton from "../Components/GoogleButton";
+import { GoogleLogin } from '@react-oauth/google';
 import { Link } from "react-router-dom";
 
 function Container() {
@@ -15,7 +14,14 @@ function Container() {
                 <input type="password" name="Senha-login" id="login-senha" className="textbox" />
                 <input type="button" name="Login" id="submit" className="login-button" value="Login"/>
                 <p className="text">OU</p>
-                <GoogleButton></GoogleButton>
+                <GoogleLogin
+                        onSuccess={credentialResponse => {
+                            console.log(credentialResponse);
+                        }}
+                        onFailure={() => {
+                            console.log('Login Failed')
+                        }}
+                />
                 <p className="text">Ainda não possui conta? <Link to={'/Register'}>Clique aqui!</Link>
                 </p>
             </div>
