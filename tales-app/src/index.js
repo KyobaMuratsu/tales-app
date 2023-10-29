@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import './style/index.css'
@@ -7,11 +7,11 @@ import './style/index.css'
 import App from './App';
 
 const clientId = "389698188235-6rjeapv7a0p3mquilchkavfb3283g8vo.apps.googleusercontent.com";
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-
-ReactDOM.render(
+root.render(
   <GoogleOAuthProvider clientId={clientId}>
     <App/>
-  </GoogleOAuthProvider>,
-  document.getElementById('root')
-)
+  </GoogleOAuthProvider>
+);

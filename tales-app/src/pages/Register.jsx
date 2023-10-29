@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../layout/Components/Header";
-import Container from "../layout/Register/ContainerRegister";
+import Container from "../layout/User/Register/Register";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function Register() {

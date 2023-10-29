@@ -1,12 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import './style/App.css';
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { ACCESS_TOKEN } from "./layout/Constants";
+import { getCurrentUser } from "./layout/util/APIItils";
 
-function App(){ 
+import './style/App.css';
+
+function App() {
+  const infoDefault = {
+      authenticated: false,
+      currentUser: null,
+      loading: true
+};
+
+const [info, setInfo] = useState(infoDefault)
+
+function loadCurrentlyLoggedUser(){
+  getCurrentUser().then((response) => {
+      setInfo({
+          ...info,
+          currentUser: response,
+          authenticated: true,
+          loading: false
+      })
+      console.log(infoDefault);
+  }).catch(error => {
+      setInfo({
+          ...info,
+          loading: false
+      });
+  });
+}
+
+function handleLogout() {
+  localStorage.removeItem(ACCESS_TOKEN);
+  setInfo({
+      currentUser: null,
+      authenticated: false
+  });
+  console.log("Funcionou!")
+}
+
     return (
         <Router>
           <Routes>
@@ -15,6 +51,7 @@ function App(){
           </Routes>
         </Router>
       );
+
 }
 
 export default App
