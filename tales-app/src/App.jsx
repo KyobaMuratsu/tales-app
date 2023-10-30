@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { ACCESS_TOKEN } from "./layout/Constants";
-import { getCurrentUser } from "./layout/util/APIItils";
+import { getCurrentUser } from "./layout/Util/APIUtils";
 
 import './style/App.css';
 
@@ -43,15 +43,21 @@ function handleLogout() {
   console.log("Funcionou!")
 }
 
-    return (
-        <Router>
-          <Routes>
-              <Route path="/" element={<Login/>}/>      
-              <Route path="/Register" element={<Register/>}/>
-          </Routes>
-        </Router>
+function render(){
+  if(info.loading){
+    return <h1/>;
+  }
+}
+
+    return (     
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login/>}/>      
+          <Route path="/Register" element={<Register/>}/>
+        </Routes>
+      </Router>
       );
 
 }
 
-export default App
+export default App;

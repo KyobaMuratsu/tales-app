@@ -1,11 +1,10 @@
 import React from "react";
-import '../../../style//Login.css';
+import '../../../style/Login.css';
 import { GoogleLogin } from '@react-oauth/google';
 import { Link } from "react-router-dom";
 
-function Container(){
+function Login(){
     return(
-        
         <main className="main">
             <div className="container">
                 <h1 className="titulo">Bem vindo(a)!</h1>
@@ -31,4 +30,4 @@ function Container(){
     );
 }
 
-export default Container
+export default Login
