@@ -7,6 +7,7 @@ import { ACCESS_TOKEN } from "./layout/Constants";
 import { getCurrentUser } from "./layout/util/APIItils";
 
 import './style/App.css';
+import Feed from "./pages/Feed";
 
 function App() {
   const infoDefault = {
@@ -46,8 +47,9 @@ function handleLogout() {
     return (
         <Router>
           <Routes>
-              <Route path="/" element={<Login/>}/>      
+              <Route path="/" element={<Login/>}/>    
               <Route path="/Register" element={<Register/>}/>
+              <Route path="/Feed" element={<Feed/>}/>
           </Routes>
         </Router>
       );

@@ -3,19 +3,20 @@ import '../../../style/Login.css';
 import { GoogleLogin } from '@react-oauth/google'
 import { Link } from "react-router-dom";
 
-function Container() {
+function Register() {
     return(
       <main className="main">
             <div className="container">
-                <h1 className="titulo">Vamos começar?</h1>
+                <h1 className="title">Vamos começar?</h1>
                 <p className="text">Matricula</p>
                 <input type="text" name="Matricula-E-mail" id="login-matricula" className="textbox" />
                 <p className="text">Senha</p>
                 <input type="password" name="Senha-login" id="login-senha" className="textbox" />
                 <p className="text">Repita a senha</p>
                 <input type="password" name="Senha-login" id="login-senha" className="textbox" />
+                <div className="space"></div>
                 <input type="button" name="Login" id="submit" className="login-button" value="Registrar"/>
-                <p className="text">OU</p>
+                <p className="text">ou</p>
                 <GoogleLogin
                         onSuccess={credentialResponse => {
                             console.log(credentialResponse);
@@ -31,4 +32,4 @@ function Container() {
     );
 }
 
-export default Container
+export default Register

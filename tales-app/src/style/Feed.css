@@ -1,0 +1,46 @@
+body{
+    background-image: url('../assets/background_tales.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Lobster;
+    font-size: 2.438rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.5%; /* 85.595px */
+    letter-spacing: -0.017rem;
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px
+}
+
