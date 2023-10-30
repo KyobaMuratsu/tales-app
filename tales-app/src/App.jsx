@@ -1,59 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { ACCESS_TOKEN } from "./layout/Constants";
-import { getCurrentUser } from "./layout/Util/APIUtils";
+import Profile from "./layout/User/Profile/Profile";
 
 import './style/App.css';
 
 function App() {
-  const infoDefault = {
-      authenticated: false,
-      currentUser: null,
-      loading: true
-};
-
-const [info, setInfo] = useState(infoDefault)
-
-function loadCurrentlyLoggedUser(){
-  getCurrentUser().then((response) => {
-      setInfo({
-          ...info,
-          currentUser: response,
-          authenticated: true,
-          loading: false
-      })
-      console.log(infoDefault);
-  }).catch(error => {
-      setInfo({
-          ...info,
-          loading: false
-      });
-  });
-}
-
-function handleLogout() {
-  localStorage.removeItem(ACCESS_TOKEN);
-  setInfo({
-      currentUser: null,
-      authenticated: false
-  });
-  console.log("Funcionou!")
-}
-
-function render(){
-  if(info.loading){
-    return <h1/>;
-  }
-}
 
     return (     
       <Router>
         <Routes>
           <Route path="/" element={<Login/>}/>      
-          <Route path="/Register" element={<Register/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </Router>
       );
