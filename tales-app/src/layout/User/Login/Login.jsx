@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 import '../../../style/Login.css';
 import { GoogleLogin } from '@react-oauth/google';
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { API_BASE_URL } from "../../Constants";
+import axios from "axios";
+import { useUsuarioApi } from "../../../hooks/UsuarioApiHook";
 
 function Login(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [user, setUser] = useState('');
     const navigate = useNavigate();
+
+    const usuarioApi = useUsuarioApi();
+
 // https://www.freecodecamp.org/portuguese/news/como-persistir-um-usuario-conectado-com-react/
     const handleSubmit = async e => {
         e.preventDefault();
@@ -21,13 +25,6 @@ function Login(){
         setUser(response.data);
         localStorage.setItem('user', response.data);
         console.log(response.data);
-    };
-
-    const handleLogout = () => {
-      setUser({});
-      setUsername("");
-      setPassword("");
-      localStorage.clear();  
     };
 
     useEffect(() => {
@@ -61,13 +58,15 @@ function Login(){
 
                     <input type="submit"
                             className="login-button"
-                            value="Login"/>
+                            value="Login"
+                            />
                 </form>
                 <p className="text">OU</p>
                 <GoogleLogin
-                        onSuccess={credentialResponse => {
+                        onSuccess={async (credentialResponse) => {
                             localStorage.setItem("AUTH_ID", JSON.stringify(credentialResponse));
                             console.log(credentialResponse);
+                            await usuarioApi.getUsuario(credentialResponse.credential);
                             navigate('/profile');
                         }}
                         onFailure={() => {
@@ -77,6 +76,7 @@ function Login(){
                 <p className="text">Ainda não possui conta? <Link to={'/register'}>Clique aqui!</Link>
                 </p>
             </div>
+            <Link justify-content="center" className="titulo" to={'/Feed'}>Home</Link>
         </main>
     );
 }
