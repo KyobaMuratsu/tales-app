@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { ACCESS_TOKEN } from "./layout/Constants";
-import { getCurrentUser } from "./layout/util/APIItils";
+import { getCurrentUser } from "./api/APIItils";
 
 import './style/App.css';
 import Feed from "./pages/Feed";
