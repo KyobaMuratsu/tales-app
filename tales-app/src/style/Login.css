@@ -33,6 +33,7 @@ body{
     width: fit-content;
     height: fit-content;
     padding: 1% 2% 1% 2%;
+    user-select: none;
 }
 
 .title{
@@ -99,6 +100,7 @@ body{
     padding: 2% 0 2% 0;
     height: 45%;
     width: 30%;
+    user-select: none;
 }
 
 .login-button{

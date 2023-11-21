@@ -16,16 +16,7 @@ function Register() {
                 <input type="password" name="Senha-login" id="login-senha" className="textbox" />
                 <div className="space"></div>
                 <input type="button" name="Login" id="submit" className="login-button" value="Registrar"/>
-                <p className="text">ou</p>
-                <GoogleLogin
-                        onSuccess={credentialResponse => {
-                            console.log(credentialResponse);
-                        }}
-                        onFailure={() => {
-                            console.log('Login Failed')
-                        }}
-                />
-                <p className="text">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
+                <br/><p className="text">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
                 </p>
             </div>
         </main>

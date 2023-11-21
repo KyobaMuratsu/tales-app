@@ -1,0 +1,32 @@
+body{
+    background-image: url('../assets/background_tales.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.post-border{
+    background-color: transparent;
+    position: fixed;
+    bottom: 3rem;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: row;
+    row-gap: 10px;
+    width: 95%;
+    height: 100px;
+    user-select: none;
+}
+
+.post-button{
+    width: 100px;
+    height: 100px;
+    position: sticky;
+}
+
