@@ -1,21 +1,25 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import '../../../style/Login.css';
 import axios from '../../../api/axios';
 import { GoogleLogin } from '@react-oauth/google';
-import { Link, Navigate } from "react-router-dom";
-import AuthContext from "../../Components/AuthProvider"; 
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const LOGIN_URL = 'auth/login';
 
 function Login(){
-    const { setAuth } = useContext(AuthContext);
+    const { setAuth } = useAuth();
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
     const userRef = useRef();
     const errRef = useRef();
 
     const[login, setLogin] = useState('');
     const[password, setPassword] = useState('');
     const[errorMessage, setErrorMessage] = useState('');
-    const[sucessMessage, setSucessMessage] = useState(false);
   
     useEffect(() => {
         userRef.current.focus();
@@ -36,14 +40,14 @@ function Login(){
                     },
                 );
             console.log(JSON.stringify(response?.data));
-            localStorage.setItem("Token", JSON.stringify(response?.data))
+            sessionStorage.setItem("Token", JSON.stringify(response?.data))
             // console.log(JSON.stringify(response?.data));
             const acessToken = response?.data?.acessToken;
             const roles = response?.data?.roles;
             setAuth({login, password, roles, acessToken});
             setLogin('');
             setPassword('');
-            setSucessMessage(true);
+            navigate(from, {replace: true});
         } catch (error) {
             if(!error?.response){
                 setErrorMessage('No Server Responde');
@@ -62,10 +66,6 @@ function Login(){
     }
 
     return(
-        <>
-        {sucessMessage ? (
-            <Navigate to="/feed"/>
-        ): (
         <main className="main">
             <div className="container">
                 <h1 className="title">Bem vindo(a)!</h1>
@@ -98,7 +98,7 @@ function Login(){
                 <p className="text">ou</p>
                 <GoogleLogin
                         onSuccess={credentialResponse => {
-                            localStorage.setItem("AUTH_ID", JSON.stringify(credentialResponse));
+                            sessionStorage.setItem("AUTH_ID", JSON.stringify(credentialResponse));
                             console.log(credentialResponse);
                         }}
                         onFailure={() => {
@@ -112,8 +112,5 @@ function Login(){
         </main>
         
         )}
-        </>
-    );
-}
 
 export default Login

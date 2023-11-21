@@ -1,6 +1,5 @@
 import React from "react";
 import HomeBar from "../layout/Components/HomeBar";
-import Container from '../layout/User/Feed/Feed';
 import { GoogleOAuthProvider } from '@react-oauth/google'
 
 function Feed() {
