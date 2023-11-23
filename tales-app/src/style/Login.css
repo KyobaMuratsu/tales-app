@@ -90,14 +90,6 @@ body{
     transition: .4s;
 }
 
-.textbox:hover{
-    background-color: #D9D9D9;
-    border-radius: 5px;
-    height: 30px;
-    width: 90%;
-    align-content: center;
-}
-
 .textbox:focus{
     background-color: #D9D9D9;
     border-radius: 5px;

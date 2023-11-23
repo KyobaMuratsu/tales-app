@@ -13,7 +13,7 @@ body{
 .post-border{
     background-color: transparent;
     position: fixed;
-    bottom: 3rem;
+    bottom: 5rem;
     display: flex;
     justify-content: right;
     align-items: right;
@@ -28,5 +28,12 @@ body{
     width: 100px;
     height: 100px;
     position: sticky;
+    transition: var(--speed);
+}
+
+.post-button:hover{
+    width: 120px;
+    height: 120px;
+    transition: var(--speed);
 }
 

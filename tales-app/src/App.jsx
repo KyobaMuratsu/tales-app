@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Feed from "./pages/Feed";
+import CreatePost from "./pages/CreatePost";
 import RequireAuth from "./layout/Components/RequireAuth";
-
-import './style/App.css';
 
 function App() {
 
@@ -15,11 +14,8 @@ function App() {
           <Routes>
               <Route path="/" element={<Login/>}/>    
               <Route path="/Register" element={<Register/>}/>
-            
-              {/* Rotas protegidas */}
-              <Route element={<RequireAuth/>}>
-                <Route path="/Feed" element={<Feed/>}/>
-              </Route>
+              <Route path="/Feed" element={<Feed/>}/>
+              <Route path="/CreatePost" element={<CreatePost/>}/>
           </Routes>
         </Router>
       );
