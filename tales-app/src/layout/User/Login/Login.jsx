@@ -4,6 +4,7 @@ import axios from '../../../api/axios';
 import { GoogleLogin } from '@react-oauth/google';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import { useRefreshToken } from "../../../hooks/useRefreshToken";
 
 const LOGIN_URL = 'auth/login';
 
@@ -108,7 +109,7 @@ function Login(){
                 <p className="text">Ainda não possui conta? <Link to={'/Register'}>Clique aqui!</Link>
                 </p>
             </div>
-            <Link justify-content="center" className="titulo" to={'/Feed'}>Home</Link>
+            <Link justify-content="center" className="titulo" onSubmit={useRefreshToken} to={'/Feed'}>Home</Link>
         </main>
         
         )}
