@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import '../../../style/Login.css';
+import '../Login/Login.css';
 import axios from "../../../api/axios"
 import { GoogleLogin } from '@react-oauth/google'
 import { Link } from "react-router-dom";

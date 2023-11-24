@@ -1,4 +1,4 @@
-import '../../../style/CreatePost.css';
+import './CreatePost.css';
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 

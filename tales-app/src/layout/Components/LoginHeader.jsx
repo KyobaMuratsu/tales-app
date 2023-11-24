@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../../style/Login.css';
+import '../User/Login/Login.css';
 
 import Logo from '../../assets/tales_logo.png';
 
