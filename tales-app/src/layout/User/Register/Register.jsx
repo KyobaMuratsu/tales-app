@@ -150,7 +150,7 @@ function Register() {
                             console.log('Login Failed')
                         }}
                 />
-                <p className="text">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
+                <p className="h1">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
                 </p>
             <p ref={errorRef} className={errorMessage ? "errormessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
             </form>
