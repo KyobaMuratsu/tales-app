@@ -80,7 +80,7 @@ function Register() {
         <p ref={errorRef} className={errorMessage ? "errmsg" : "offscreen"} aria-live="assertive">{errorMessage}</p>
             <form onSubmit={handleSubmit} className="container">
                 <h1 className="title">Vamos começar?</h1>
-                <label className="text" htmlFor="matricula">Matricula</label>
+                <label className="text" htmlFor="matricula">Matrícula</label>
                     <input  
                         type="text"
                         id="matricula"
@@ -99,7 +99,7 @@ function Register() {
                         }}
                         className="textbox" />
 
-                <label className="text" htmlFor="senha">Senha
+                <label className="text" htmlFor="senha">Crie uma senha
                 </label>
                     <input 
                         type="password"

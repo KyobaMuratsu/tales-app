@@ -10,6 +10,8 @@ body{
     --speed: 0.2s;
     --main-color: #002B5B;
     --main-color-hover: #00418a;
+    --secondary-color: #1A5F7A;
+    --secondary-color-hover: #159895;
     --textbox-color: #D9D9D9;
     height: 100%;
     width: 100%;

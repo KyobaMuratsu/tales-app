@@ -13,8 +13,8 @@ body{
 
 .postpage-container{
     border: 0.25rem solid var(--main-color);
-    background-color: white;
-    border-radius: 2%;
+    background-color: var(--main-color);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ body{
     width: 650px;
     height: fit-content;
     padding: 0 2% 1% 2%;
-    margin-top: 6%;
+    margin-top: 10%;
     user-select: none;
 }
 
@@ -34,7 +34,6 @@ body{
     font-size: 2.8rem;
     font-style: normal;
     letter-spacing: -0.017rem;
-    text-align: center;
     height: 44px;
     margin-top: 16px;
     margin-bottom: 10px;
@@ -54,8 +53,7 @@ body{
 }
 
 .postpage-text{
-    text-align: center;
-    color: #002B5B;
+    color: var(--main-color);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
@@ -67,53 +65,61 @@ body{
 }
 
 .description-textbox{
-    background-color: var(--textbox-color);
-    border-radius: 2px;
-    height: 90px;
+    background-color: white;
+    height: 150px;
     width: 105%;
     font-family: Arial, Helvetica, sans-serif;
-    align-content: center;
-    text-indent: 7px;
     transition: .4s;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-top: 12px;
+    resize: none;
+    
 }
 
-.description-textbox:focus{
+.post-bar{
+    height: 40px;
+    width: 108%;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
 }
 
 .post-image-input {
     background-color: var(--textbox-color);
-    height: 50px;
+    height: 40px;
     width: 400px;
     user-select: none;
     border-radius: 6px;
+    display: none;
 }
 
 .post-image {
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     user-select: none;
-    border-radius: 16px;
-    margin-top: 5px;
-    margin-bottom: 40px;
+    border-radius: 6px;
+    margin-right: 6px;
+    cursor: pointer;
 }
 
 .postpage-button{
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     height: 45px;
-    width: 300px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    width: 200px;
+    border-radius: 40px;
     transition: .4s;
+    cursor: pointer;
     
 }
 
 .postpage-button:hover{
-    background-color: var(--main-color-hover);
+    background-color: var(--secondary-color-hover);
     color: white;
     height: 45px;
-    width: 300px;
+    width: 180px;
 }

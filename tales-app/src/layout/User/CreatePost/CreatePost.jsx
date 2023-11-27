@@ -1,7 +1,9 @@
 import '../../../style/CreatePost.css';
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import ImagePlaceholder from '../../../assets/image-placeholder.svg';
+import ImagePlaceholder from '../../../assets/image-placeholder-white.svg';
+import TagsIcon from '../../../assets/hash.svg';
+
 
 const handlePost = "";
 
@@ -9,29 +11,35 @@ function CreatePost(){
 
     const inputRef = useRef(null);
 
+    const handleImageClick = () => {
+        inputRef.current.click();
+    }
+
     return(
         <main className="main">
             <form className="postpage-container">
-                <h1 className="postpage-title">Criar publicação</h1>
-                <h1 className='postpage-subtitle'>Compartilhe seus momentos para que sejam lembrados</h1>
-                <label className="postpage-text">Adicione uma descrição</label>
-                    <input  
+                    <textarea  
+                        maxLength="640"
                         type="text"
                         id="description"
                         autoComplete="off"
                         required
                         className="description-textbox"
-                        placeholder='O que você gostaria de contar?'/>
+                        placeholder='Qual história pretende compartilhar hoje?'/>
 
-                <label className="postpage-text">Selecione uma imagem</label>
+                <div className='post-bar'>
+                    <div onClick={handleImageClick}>
                     <input 
                         type="file"
                         ref={inputRef}            
-                        name="post-image" 
-                        id="postImage" 
+                        name="post-image"
+                        id="postImage"
                         className="post-image-input"
-                        />
+                    />
                     <img src={ImagePlaceholder} alt="" className='post-image'></img>
+                    </div>
+                    <img src={TagsIcon} alt="" className='post-image'></img>
+                </div>
 
                 <button  
                     type="submit"
