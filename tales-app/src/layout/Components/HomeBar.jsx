@@ -24,7 +24,6 @@ function HomeBar() {
         let handler = (e)=>{
             if(!menuRef.current.contains(e.target)) {
               setOpenNotif(false);
-              console.log(menuRef.current);
             }
         };
         document.addEventListener("mousedown", handler);
@@ -38,7 +37,6 @@ function HomeBar() {
         let handler = (e)=>{
             if(!menuRef.current.contains(e.target)) {
               setOpenProf(false);
-              console.log(menuRef.current);
             }
         };
         document.addEventListener("mousedown", handler);

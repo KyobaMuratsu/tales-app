@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import '../../../style/Login.css';
+import './Login.css';
 import axios from '../../../api/axios';
 import { GoogleLogin } from '@react-oauth/google';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import { useRefreshToken } from "../../../hooks/useRefreshToken";
 
 const LOGIN_URL = 'auth/login';
 
@@ -47,7 +48,7 @@ function Login(){
             setAuth({login, password, roles, acessToken});
             setLogin('');
             setPassword('');
-            navigate(from, {replace: true});
+            navigate("/feed");
         } catch (error) {
             if(!error?.response){
                 setErrorMessage('No Server Responde');
@@ -107,8 +108,7 @@ function Login(){
                 />
                 <p className="h1">Ainda não possui conta? <Link to={'/Register'}>Clique aqui!</Link>
                 </p>
-            </div>
-            <Link justify-content="center" className="titulo" to={'/Feed'}>Home</Link>
+            </div>            <Link justify-content="center" className="titulo" onSubmit={useRefreshToken} to={'/Feed'}>Home</Link>
         </main>
         
         )}
