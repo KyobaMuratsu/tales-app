@@ -77,7 +77,6 @@ function Register() {
         ) : (
     
       <main className="main">
-        <p ref={errorRef} className={errorMessage ? "errmsg" : "offscreen"} aria-live="assertive">{errorMessage}</p>
             <form onSubmit={handleSubmit} className="container">
                 <h1 className="title">Vamos começar?</h1>
                 <label className="text" htmlFor="matricula">Matricula</label>

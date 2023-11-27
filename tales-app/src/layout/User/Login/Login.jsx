@@ -5,8 +5,7 @@ import { GoogleLogin } from '@react-oauth/google';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { useRefreshToken } from "../../../hooks/useRefreshToken";
-
-const LOGIN_URL = 'auth/login';
+import { LOGIN_URL } from "../../Constants";
 
 function Login(){
     const { setAuth } = useAuth();
