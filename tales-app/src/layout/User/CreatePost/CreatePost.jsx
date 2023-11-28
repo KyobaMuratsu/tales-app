@@ -10,10 +10,17 @@ const handlePost = "";
 function CreatePost(){
 
     const inputRef = useRef(null);
+    const [image, setImage] = useState("");
 
     const handleImageClick = () => {
         inputRef.current.click();
     }
+
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        console.log(file);
+        setImage(event.target.files[0]);
+    };
 
     return(
         <main className="main">
@@ -30,15 +37,17 @@ function CreatePost(){
                 <div className='post-bar'>
                     <div onClick={handleImageClick}>
                     <input 
-                        type="file"
-                        ref={inputRef}            
                         name="post-image"
                         id="postImage"
+                        type="file"
+                        accept="image/png, image/gif, image/jpeg"
+                        ref={inputRef}            
                         className="post-image-input"
+                        onChange={handleImageChange}
                     />
-                    <img src={ImagePlaceholder} alt="" className='post-image'></img>
+                    {image ? (<img src={URL.createObjectURL(image)} alt="" className='post-image-selected'></img>) : (<img src={ImagePlaceholder} alt="" className='post-image'></img>)}
                     </div>
-                    <img src={TagsIcon} alt="" className='post-image'></img>
+                    <img src={TagsIcon} alt="" className='post-tag'></img>
                 </div>
 
                 <button  

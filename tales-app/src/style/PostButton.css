@@ -32,8 +32,6 @@ body{
 }
 
 .post-button:hover{
-    width: 110px;
-    height: 110px;
     transform: rotate(-90deg);
     transition: var(--speed);
 }

@@ -9,8 +9,7 @@ import UserIcon from '../../assets/user.svg';
 import ConfigIcon from '../../assets/settings.svg';
 import LogoutIcon from '../../assets/log-out.svg';
 import { Link } from 'react-router-dom';
-
-
+import { useLogout } from "../../hooks/useLogout";
 import React, {useState, useEffect, useRef} from "react";
 
 function HomeBar() {
@@ -19,6 +18,12 @@ function HomeBar() {
     const [openProf, setOpenProf] = useState(false);
 
     let menuRef = useRef();
+
+    const handleLogout = () => {
+        logout();
+    }
+
+    const logout = useLogout();
 
     useEffect(() => {
         let handler = (e)=>{
@@ -52,7 +57,7 @@ function HomeBar() {
         <Link justify-content="center" className="titulo" to={'/Feed'}>
             <img src={TalesIcon} alt="Logo" className="tales-icon"/>
             </Link>
-        <input type="text" alt="Barra de pesquisa" id="searchbar" className="searchbar" placeholder="Pesquisar no Tales"/>
+        <input type="text" alt="Barra de pesquisa" id="searchbar" className="searchbar" placeholder="Pesquisar no Tales" maxLength={46}/>
         <img src={SearchIcon} alt="Search" className="search-icon"/>
         </div>
 
@@ -77,7 +82,8 @@ function HomeBar() {
             <ul>
                 <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
                 <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
-                <DropdownItemProfile img = {LogoutIcon} text = {"Logout"}/>
+                <a onClick={handleLogout} href='/'>
+                <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => logout()}/></a>
             </ul>
         </div>
         </div>

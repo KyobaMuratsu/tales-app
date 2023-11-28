@@ -108,7 +108,7 @@ function Login(){
                 />
                 <p className="h1">Ainda não possui conta? <Link to={'/Register'}>Clique aqui!</Link>
                 </p>
-            </div>            <Link justify-content="center" className="titulo" onSubmit={useRefreshToken} to={'/Feed'}>Home</Link>
+            </div>
         </main>
         
         )}
