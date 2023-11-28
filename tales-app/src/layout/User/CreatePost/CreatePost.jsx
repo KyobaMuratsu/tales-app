@@ -2,6 +2,8 @@ import './CreatePost.css';
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from '../../../api/axios';
+import ImagePlaceholder from '../../../assets/image-placeholder-white.svg';
+import TagsIcon from '../../../assets/hash.svg';
 import { PUBLICAR_URL } from '../../Constants';
 
 function CreatePost(){
@@ -55,7 +57,9 @@ function CreatePost(){
                 </form>
             </div>
         </main>
-    );
+    
+
+    )
 }
 
-export default CreatePost
+export default CreatePost;

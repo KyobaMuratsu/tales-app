@@ -79,7 +79,7 @@ function Register() {
       <main className="main">
             <form onSubmit={handleSubmit} className="container">
                 <h1 className="title">Vamos começar?</h1>
-                <label className="text" htmlFor="matricula">Matricula</label>
+                <label className="text" htmlFor="matricula">Matrícula</label>
                     <input  
                         type="text"
                         id="matricula"
@@ -98,7 +98,7 @@ function Register() {
                         }}
                         className="textbox" />
 
-                <label className="text" htmlFor="senha">Senha
+                <label className="text" htmlFor="senha">Crie uma senha
                 </label>
                     <input 
                         type="password"
@@ -149,7 +149,7 @@ function Register() {
                             console.log('Login Failed')
                         }}
                 />
-                <p className="text">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
+                <p className="h1">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
                 </p>
             <p ref={errorRef} className={errorMessage ? "errormessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
             </form>

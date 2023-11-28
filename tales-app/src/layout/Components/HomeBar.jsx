@@ -8,6 +8,7 @@ import MenuIcon from '../../assets/menu.svg'
 import UserIcon from '../../assets/user.svg';
 import ConfigIcon from '../../assets/settings.svg';
 import LogoutIcon from '../../assets/log-out.svg';
+import useLogout from '../../hooks/useLogout'
 import { Link } from 'react-router-dom';
 
 
@@ -15,10 +16,15 @@ import React, {useState, useEffect, useRef} from "react";
 
 function HomeBar() {
 
+    const logout = useLogout();
     const [openNotif, setOpenNotif] = useState(false);
     const [openProf, setOpenProf] = useState(false);
 
     let menuRef = useRef();
+
+    const handleLogout = () => {
+        logout();
+    }
 
     useEffect(() => {
         let handler = (e)=>{
@@ -77,7 +83,9 @@ function HomeBar() {
             <ul>
                 <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
                 <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
-                <DropdownItemProfile img = {LogoutIcon} text = {"Logout"}/>
+                <a onClick={handleLogout} href='/'>
+                <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => handleLogout}/>
+                </a>
             </ul>
         </div>
         </div>
