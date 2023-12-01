@@ -9,7 +9,7 @@ function CreatePost(){
 
     const inputRef = useRef(null);
     const [image, setImage] = useState("");
-    const [description, setDescription] = useState('');
+    const [textoPostagem, setTextoPostagem] = useState('');
     const Token = JSON.parse(sessionStorage.getItem('Token'));
 
     const handleImageClick = () => {
@@ -26,7 +26,7 @@ function CreatePost(){
         e.preventDefault();
         try {
             const response = await axios.post(PUBLICAR_URL,
-                JSON.stringify({description}),
+                JSON.stringify({textoPostagem}),
                 {
                     headers: {'Authorization': `${Token}`,
                             'Content-Type': 'application/json'}
@@ -34,7 +34,7 @@ function CreatePost(){
                 },
             );
             console.log(Token)
-            console.log(description)
+            console.log(textoPostagem)
             console.log(response)
         } catch (error) {
             console.log(error);
@@ -47,10 +47,10 @@ function CreatePost(){
                     <textarea  
                         maxLength="640"
                         type="text"
-                        id="description"
+                        id="TextoPostagem"
                         autoComplete="off"
-                        onChange={(description) => setDescription(description.target.value)}
-                        value={description}
+                        onChange={(textoPostagem) => setTextoPostagem(textoPostagem.target.value)}
+                        value={textoPostagem}
                         required
                         className="description-textbox"
                         placeholder='Qual história pretende compartilhar hoje?'/>

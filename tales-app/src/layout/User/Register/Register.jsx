@@ -45,7 +45,6 @@ function Register() {
                 }
             );
             // TODO: remove console.logs before deployment
-            console.log(JSON.stringify(response?.data));
             sessionStorage.setItem(JSON.stringify(response?.data));
             //console.log(JSON.stringify(response))
             setSuccess(true);
@@ -77,7 +76,6 @@ function Register() {
         ) : (
     
       <main className="main">
-        <p ref={errorRef} className={errorMessage ? "errmsg" : "offscreen"} aria-live="assertive">{errorMessage}</p>
             <form onSubmit={handleSubmit} className="container">
                 <h1 className="title">Vamos começar?</h1>
                 <label className="text" htmlFor="matricula">Matrícula</label>

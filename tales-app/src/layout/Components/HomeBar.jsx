@@ -51,46 +51,43 @@ function HomeBar() {
         }
     });
 
+
     return( 
-    <div className="border">
-        <div className="homebarLeft">
-        <Link justify-content="center" className="titulo" to={'/Feed'}>
-            <img src={TalesIcon} alt="Logo" className="tales-icon"/>
-            </Link>
-        <input type="text" alt="Barra de pesquisa" id="searchbar" className="searchbar" placeholder="Pesquisar no Tales" maxLength={46}/>
-        <img src={SearchIcon} alt="Search" className="search-icon"/>
-        </div>
-
-        <div className="homebarRight" ref={menuRef}>
-        <img src={MessageIcon} alt="Message" className="message-icon"/>
-
-        <div className="div-line"></div>
-
-        <img src={NotificationIcon} alt="Notification" className="notif-icon" onClick={()=>{setOpenNotif(!openNotif); setOpenProf(false)}}/>
-        <div className={`dropdown-menu ${openNotif? 'active' : 'inactive'}` }>
-            <h3>Notificações<br/><span>Mantenha-se atualizado</span></h3>
-            <ul>
-                <DropdownItemNotification img = {TalesLogo} text = {"Você não possui notificações!"}/>
-            </ul>
-        </div>
-
-        <div className="div-line"></div>
-
-        <img src={MenuIcon} alt="Profile" className="menu-icon" onClick={()=>{setOpenProf(!openProf); setOpenNotif(false)}}/>
-        <div className={`dropdown-menu2 ${openProf? 'active' : 'inactive'}`}>
-            <h3>Menu<br/><span>Suas informações</span></h3>
-            <ul>
-                <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
-                <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
-                <a onClick={handleLogout} href='/'>
-                <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => logout()}/></a>
-            </ul>
+        <div className='homebar-hitbox'>
+        <div className="border">
+            <div className="homebarLeft">
+            <Link justify-content="center" className="titulo" to={'/Feed'}>
+                <img src={TalesIcon} alt="Logo" className="tales-icon"/>
+                </Link>
+            <input type="text" alt="Barra de pesquisa" id="searchbar" className="searchbar" placeholder="Pesquisar no Tales" maxLength={46}/>
+            <img src={SearchIcon} alt="Search" className="search-icon"/>
+            </div>
+            <div className="homebarRight" ref={menuRef}>
+            <img src={MessageIcon} alt="Message" className="message-icon"/>
+            <div className="div-line"></div>
+            <img src={NotificationIcon} alt="Notification" className="notif-icon" onClick={()=>{setOpenNotif(!openNotif); setOpenProf(false)}}/>
+            <div className={`dropdown-menu ${openNotif? 'active' : 'inactive'}` }>
+                <h3>Notificações<br/><span>Mantenha-se atualizado</span></h3>
+                <ul>
+                    <DropdownItemNotification img = {TalesLogo} text = {"Você não possui notificações!"}/>
+                </ul>
+            </div>
+            <div className="div-line"></div>
+            <img src={MenuIcon} alt="Profile" className="menu-icon" onClick={()=>{setOpenProf(!openProf); setOpenNotif(false)}}/>
+            <div className={`dropdown-menu2 ${openProf? 'active' : 'inactive'}`}>
+                <h3>Menu<br/><span>Suas informações</span></h3>
+                <ul>
+                    <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
+                    <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
+                    <a onClick={handleLogout} href='/'>
+                    <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => logout()}/></a>
+                </ul>
+            </div>
+            </div>
         </div>
         </div>
-    </div>
-    );
-}
-
+        );
+    }
 function DropdownItemNotification(props){
     return(
         <li className="dropdownItemNotification">
