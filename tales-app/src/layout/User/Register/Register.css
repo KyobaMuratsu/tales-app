@@ -21,7 +21,7 @@ body{
     align-items: center;
 }
 
-.container{
+.register-container{
     border: 0.25rem solid #002B5B;
     background-color: white;
     border-radius: 2%;
@@ -29,10 +29,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 16px;
     width: fit-content;
     height: fit-content;
-    padding: 0 2% 1% 2%;
+    padding: 0 40px 8px 40px;
     user-select: none;
 }
 
@@ -107,50 +107,25 @@ body{
     user-select: none;
 }
 
-.login-button{
+.register-button{
     background-color: var(--main-color);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    height: 35px;
+    height: 40px;
     width: 60%;
     border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
     transition: .4s;
     
 }
 
-.login-button:hover{
+.register-button:hover{
     background-color: var(--main-color-hover);
     color: white;
 }
 
 .space{
     height: 4px;
-}
-
-.google-login-button {
-    display: flex;
-    align-items: center;
-    background: white;
-    color: #444;
-    width: 70%;
-    border-radius: 5px;
-    border: thin solid #888;
-    box-shadow: 1px 1px 1px grey;
-    white-space: nowrap;
-    justify-content: space-around;
-    cursor: pointer;
-    margin-bottom: 30px;
-    margin-top: 10px;
-}
-
-.google-text{
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.google-login-button-icon {
-    background: no-repeat;
-    width: 42px;
-    height: 42px;
 }

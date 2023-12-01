@@ -1,6 +1,5 @@
 import './CreatePost.css';
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useRef, useState } from "react";
 import ImagePlaceholder from '../../../assets/image-placeholder-white.svg';
 import TagsIcon from '../../../assets/hash.svg';
 
@@ -37,17 +36,17 @@ function CreatePost(){
                 <div className='post-bar'>
                     <div onClick={handleImageClick}>
                     <input 
-                        name="post-image"
-                        id="postImage"
+                        name="postpage-image"
+                        id="postpageImage"
                         type="file"
                         accept="image/png, image/gif, image/jpeg"
                         ref={inputRef}            
-                        className="post-image-input"
+                        className="postpage-image-input"
                         onChange={handleImageChange}
                     />
-                    {image ? (<img src={URL.createObjectURL(image)} alt="" className='post-image-selected'></img>) : (<img src={ImagePlaceholder} alt="" className='post-image'></img>)}
+                    {image ? (<img src={URL.createObjectURL(image)} alt="" className='postpage-image-selected'></img>) : (<img src={ImagePlaceholder} alt="" className='postpage-image'></img>)}
                     </div>
-                    <img src={TagsIcon} alt="" className='post-tag'></img>
+                    <img src={TagsIcon} alt="" className='postpage-tag'></img>
                 </div>
 
                 <button  

@@ -68,7 +68,7 @@ function Login(){
 
     return(
         <main className="main">
-            <div className="container">
+            <div className="login-container">
                 <h1 className="title">Bem vindo(a)!</h1>
                 <p className="text">Matrícula</p>
                 <form onSubmit={handleSubmit} className="form">
@@ -106,6 +106,7 @@ function Login(){
                             console.log('Login Failed')
                         }}
                 />
+                <div className="space"></div>
                 <p className="h1">Ainda não possui conta? <Link to={'/Register'}>Clique aqui!</Link>
                 </p>
             </div>

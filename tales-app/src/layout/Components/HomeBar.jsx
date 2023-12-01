@@ -52,6 +52,7 @@ function HomeBar() {
     });
 
     return( 
+    <div className='homebar-hitbox'>
     <div className="border">
         <div className="homebarLeft">
         <Link justify-content="center" className="titulo" to={'/Feed'}>
@@ -87,6 +88,7 @@ function HomeBar() {
             </ul>
         </div>
         </div>
+    </div>
     </div>
     );
 }

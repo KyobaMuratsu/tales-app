@@ -1,6 +1,6 @@
 import React from "react";
 import '../../style/PostButton.css';
-import Button from '../../assets/botaoPublicacao1.png';
+import Button from '../../assets/botaoPublicacao3.png';
 import { Link } from "react-router-dom";
 import { useRefreshToken } from "../../hooks/useRefreshToken";
 

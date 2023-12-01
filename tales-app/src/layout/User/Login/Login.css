@@ -21,7 +21,7 @@ body{
     align-items: center;
 }
 
-.container{
+.login-container{
     border: 0.25rem solid #002B5B;
     background-color: white;
     border-radius: 2%;

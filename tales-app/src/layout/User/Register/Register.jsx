@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import '../Register/Register.css';
 import axios from "../../../api/axios"
-import { GoogleLogin } from '@react-oauth/google'
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -78,9 +77,9 @@ function Register() {
     
       <main className="main">
         <p ref={errorRef} className={errorMessage ? "errmsg" : "offscreen"} aria-live="assertive">{errorMessage}</p>
-            <form onSubmit={handleSubmit} className="container">
+            <form onSubmit={handleSubmit} className="register-container">
                 <h1 className="title">Vamos começar?</h1>
-                <label className="text" htmlFor="matricula">Matrícula</label>
+                <label className="text" htmlFor="matricula">Insira sua matrícula</label>
                     <input  
                         type="text"
                         id="matricula"
@@ -136,20 +135,11 @@ function Register() {
                         name="Senha-login" 
                         id="logirepeteSenha" 
                         className="textbox" /> */}
-                <div className="space"></div>
+
                     <button  
                         type="submit"
-                        className="login-button">Registrar</button>
+                        className="register-button">Registrar</button>
                 
-                <p className="text">ou</p>
-                <GoogleLogin
-                        onSuccess={credentialResponse => {
-                            console.log(credentialResponse);
-                        }}
-                        onFailure={() => {
-                            console.log('Login Failed')
-                        }}
-                />
                 <p className="h1">Já possui uma conta? <Link to={'/'}>Clique aqui!</Link>
                 </p>
             <p ref={errorRef} className={errorMessage ? "errormessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
