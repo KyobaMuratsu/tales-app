@@ -77,7 +77,9 @@ function HomeBar() {
             <div className={`dropdown-menu2 ${openProf? 'active' : 'inactive'}`}>
                 <h3>Menu<br/><span>Suas informações</span></h3>
                 <ul>
+                    <a href="/Profile">
                     <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
+                    </a>
                     <a href="/Config">
                     <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
                     </a>

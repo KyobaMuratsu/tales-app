@@ -17,7 +17,15 @@ function UserConfig() {
 
     return(
         <main>
-            
+            <form action="">
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+            </form>
         </main>
     );
 }
