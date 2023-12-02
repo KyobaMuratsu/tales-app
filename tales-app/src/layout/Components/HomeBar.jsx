@@ -78,9 +78,12 @@ function HomeBar() {
                 <h3>Menu<br/><span>Suas informações</span></h3>
                 <ul>
                     <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
+                    <a href="/Config">
                     <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
+                    </a>
                     <a onClick={handleLogout} href='/'>
-                    <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => logout()}/></a>
+                    <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => logout()}/>
+                    </a>
                 </ul>
             </div>
             </div>
