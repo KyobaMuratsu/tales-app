@@ -58,14 +58,14 @@ function HomeBar() {
             <div className="homebarLeft">
             <Link justify-content="center" className="titulo" to={'/Feed'}>
                 <img src={TalesIcon} alt="Logo" className="tales-icon"/>
-                </Link>
+            </Link>
             <input type="text" alt="Barra de pesquisa" id="searchbar" className="searchbar" placeholder="Pesquisar no Tales" maxLength={46}/>
-            <img src={SearchIcon} alt="Search" className="search-icon"/>
+                <img src={SearchIcon} alt="Search" className="search-icon"/>
             </div>
             <div className="homebarRight" ref={menuRef}>
-            <img src={MessageIcon} alt="Message" className="message-icon"/>
+                <img src={MessageIcon} alt="Message" className="message-icon"/>
             <div className="div-line"></div>
-            <img src={NotificationIcon} alt="Notification" className="notif-icon" onClick={()=>{setOpenNotif(!openNotif); setOpenProf(false)}}/>
+                <img src={NotificationIcon} alt="Notification" className="notif-icon" onClick={()=>{setOpenNotif(!openNotif); setOpenProf(false)}}/>
             <div className={`dropdown-menu ${openNotif? 'active' : 'inactive'}` }>
                 <h3>Notificações<br/><span>Mantenha-se atualizado</span></h3>
                 <ul>
