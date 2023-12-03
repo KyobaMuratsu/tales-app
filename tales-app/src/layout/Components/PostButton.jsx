@@ -6,12 +6,16 @@ import { useRefreshToken } from "../../hooks/useRefreshToken";
 
 function PostButton() {
 
+    const handleRefresh = () => {
+        refresh();
+    }
+
     const refresh = useRefreshToken();
     
     return( 
             <div className="post-border">
             <Link to={'/CreatePost'}>
-            <img src={Button} className="post-button" onClick={() => refresh()}/>
+            <img src={Button} className="post-button"/>
             </Link>
             </div>
             

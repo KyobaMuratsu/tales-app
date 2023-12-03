@@ -7,11 +7,11 @@ function Register() {
    
    return(
    <>
-   <GoogleOAuthProvider clientId= "389698188235-6rjeapv7a0p3mquilchkavfb3283g8vo.apps.googleusercontent.com">
-   <LoginHeader></LoginHeader>
-   <Container></Container>
-   </GoogleOAuthProvider>
-   </>
+      <GoogleOAuthProvider clientId= "389698188235-6rjeapv7a0p3mquilchkavfb3283g8vo.apps.googleusercontent.com">
+      <LoginHeader></LoginHeader>
+      <Container></Container>
+      </GoogleOAuthProvider>
+      </>
    );
 }
 

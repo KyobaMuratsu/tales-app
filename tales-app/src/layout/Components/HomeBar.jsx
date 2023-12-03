@@ -11,6 +11,7 @@ import LogoutIcon from '../../assets/log-out.svg';
 import { Link } from 'react-router-dom';
 import { useLogout } from "../../hooks/useLogout";
 import React, {useState, useEffect, useRef} from "react";
+import { useRefreshToken } from "../../hooks/useRefreshToken";
 
 function HomeBar() {
 
@@ -23,7 +24,13 @@ function HomeBar() {
         logout();
     }
 
+    const handleRefresh = () => {
+        refresh();
+    }
+
     const logout = useLogout();
+
+    const refresh = useRefreshToken();
 
     useEffect(() => {
         let handler = (e)=>{
@@ -82,7 +89,8 @@ function HomeBar() {
             <h3>Menu<br/><span>Suas informações</span></h3>
             <ul>
                 <DropdownItemProfile img = {UserIcon} text = {"Meu perfil"}/>
-                <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/>
+                <a onClick={handleRefresh} href='/Configurations'>
+                <DropdownItemProfile img = {ConfigIcon} text = {"Configurações"}/></a>
                 <a onClick={handleLogout} href='/'>
                 <DropdownItemProfile img = {LogoutIcon} text = {"Logout"} onClick={() => logout()}/></a>
             </ul>

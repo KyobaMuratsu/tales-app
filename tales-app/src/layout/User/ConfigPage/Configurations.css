@@ -1,0 +1,154 @@
+body{
+    background-image: url('../../../assets/background_tales.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+}
+
+.configs-container{
+    background-color: white;
+    border: 0.25rem solid #002B5B;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 650px;
+    height: fit-content;
+    padding: 0 12px 12px 12px;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    user-select: none;
+}
+
+.configs-title{
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Lobster;
+    font-size: 2.438rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.017rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+
+.configs-text{
+    text-align: center;
+    color: var(--main-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.configs-span{
+    text-align: center;
+    color: var(--main-color-hover);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    margin-bottom: 2px;
+    opacity: 60%;
+}
+
+.configs-tags{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    align-self: none;
+}
+
+.configs-image-input {
+    background-color: var(--textbox-color);
+    height: 300px;
+    width: 300px;
+    user-select: none;
+    border-radius: 300px;
+    display: none;
+}
+
+.configs-image {
+    border: 2px dashed var(--textbox-color);
+    height: 300px;
+    width: 300px;
+    user-select: none;
+    border-radius: 300px;
+    cursor: pointer;
+}
+
+.configs-image-selected {
+    border: 2px dashed var(--textbox-color);
+    height: 300px;
+    width: 300px;
+    user-select: none;
+    border-radius: 300px;
+    cursor: pointer;
+}
+
+.configs-textbox1{
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    height: 30px;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    text-indent: 7px;
+    transition: .4s;
+}
+
+.configs-textbox2{
+    width: 80%;
+}
+
+.tag-button{
+    background-color: var(--main-color);
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 35px;
+    width: 20%;
+    border-radius: 5px;
+    transition: .4s;
+    margin-top: 10px;
+    
+}
+
+.tag-button:hover{
+    background-color: var(--main-color-hover);
+    color: white;
+}
+
+.submitchanges-button{
+    background-color: var(--secondary-color);
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 35px;
+    width: 40%;
+    border-radius: 5px;
+    transition: .4s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.submitchanges-button:hover{
+    background-color: var(--secondary-color-hover);
+    color: white;
+}

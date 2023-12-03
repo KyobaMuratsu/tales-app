@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Feed from "./pages/Feed";
 import CreatePost from "./pages/CreatePost";
 import RequireAuth from "./layout/Components/RequireAuth";
+import Configurations from "./pages/Configurations";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
               <Route path="/Register" element={<Register/>}/>
               <Route path="/Feed" element={<Feed/>}/>
               <Route path="/CreatePost" element={<CreatePost/>}/>
+              <Route path="/Configurations" element={<Configurations/>}/>
           </Routes>
         </Router>
       );
