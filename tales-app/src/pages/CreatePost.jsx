@@ -1,7 +1,7 @@
 import React from "react";
 import HomeBar from "../layout/Components/HomeBar";
 import { GoogleOAuthProvider } from '@react-oauth/google'
-import PostCreation from "../layout/User/CreatePost/CreatePost";
+import PostCreation from "../layout/User/CreatePost/CreatePost.jsx";
 
 function CreatePost() {
 

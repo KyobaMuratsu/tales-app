@@ -6,8 +6,6 @@ import Imagem3 from '../../assets/luf8.png';
 import TextareaAutosize from 'react-textarea-autosize';
 
 
-const handlePost = "";
-
 function Post(){
 
     return(
