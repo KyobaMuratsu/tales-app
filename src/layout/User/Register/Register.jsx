@@ -2,12 +2,14 @@ import React, { useRef, useState } from "react";
 import '../Register/Register.css';
 import axios from "../../../api/axios"
 import { GoogleLogin } from '@react-oauth/google'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 const REGISTER_URL = '/register/save';
 
 function Register() {
+
+    const navigate = useNavigate();
 
     const userRef = useRef('');
     const errorRef = useRef('');
@@ -30,8 +32,6 @@ function Register() {
 
     useEffect(() => {
         setErrorMessage('');
-        console.log(matricula);
-        console.log(matchPassword);
     }, [matricula, senha, matchPassword])
     
     const handleSubmit = async (e) => {
@@ -55,6 +55,7 @@ function Register() {
         } catch (err) {
             if (!err?.response) {
                 setErrorMessage('No Server Response');
+                navigate("/");
             } else if (err.response?.status === 409) {
                 setErrorMessage('Username Taken');
             } else {

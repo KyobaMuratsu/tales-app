@@ -4,8 +4,11 @@ import ImagePlaceholder from '../../../assets/image-placeholder-white.svg';
 import TagsIcon from '../../../assets/hash.svg';
 import axios from '../../../api/axios';
 import { PUBLICAR_URL } from '../../Constants';
+import { useNavigate } from 'react-router-dom';
 
 function CreatePost(){
+
+    const navigate = useNavigate();
 
     const inputRef = useRef(null);
     const [image, setImage] = useState(null);
@@ -61,9 +64,7 @@ function CreatePost(){
                 },
             });
 
-            console.log(Token);
-            console.log(textoPostagem);
-            console.log(response);
+            navigate('/feed');
         } catch (error) {
             console.log(error);
         }

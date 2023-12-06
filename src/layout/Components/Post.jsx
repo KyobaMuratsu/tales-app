@@ -5,7 +5,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 function Post({content}) {
 
     const imagem = content.imagemUrlPostagem;
-    const ImagemAcess = imagem.replace("C:\\Users\\bruno\\OneDrive\\Área de Trabalho\\tales-app\\tales-app\\public\\Imagens", "");
+    const ImagemAcess = imagem.replace("C:\\Users\\bruno\\OneDrive\\Documentos\\projeto\\tales-app\\public\\Imagens", "");
 
     return(
     <div className="post-container">

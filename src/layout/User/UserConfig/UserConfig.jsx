@@ -64,7 +64,7 @@ function UserConfig() {
 
                 },
             });
-            navigate("/Profile");
+            navigate("/Feed");
             console.log(response);
         } catch (error) {
             console.log(error);
