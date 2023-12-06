@@ -1,55 +1,47 @@
 import React, { useState, useEffect } from 'react';
+import Post from '../../Components/Post';
 import axios from '../../../api/axios';
+import './Feed.css';
 
 const Feed = () => {
-  const Token = JSON.stringify(sessionStorage.getItem('Token'));
-  const [userTags, setUserTags] = useState([]);
-  const [feedPosts, setFeedPosts] = useState([]);
+  const Token = JSON.parse(sessionStorage.getItem('Token'));
+  const [userPosts, setUserPosts] = useState([]);
 
   useEffect(() => {
     // Função para obter as tags do usuário
-    const getUserTags = async () => {
+    const getUserPosts = async () => {
       try {
-        const response = await axios.get(`usertags`, {
-          headers: {'Authorization': `${Token}` },});
+        const response = await axios.get('userPosts', {
+            headers: {
+              'Authorization': `${Token}`,
+            },
+        }
+      );
 
-        setUserTags(response.data.tags);
-      } catch (error) {
-        console.error('Erro ao obter as tags do usuário:', error);
-      }
-    };
-
-    // Função para obter as postagens com base nas tags do usuário
-    const getFeedPosts = async () => {
-      try {
-        const response = await axios.get(`usertags`, {
-          headers: {'Authorization': `${Token}` },
-          params: { tags: userTags.join(',') }, // Envie as tags como parâmetros
-        });
-        setFeedPosts(response.data.posts);
-      } catch (error) {
-        console.error('Erro ao obter as postagens do feed:', error);
-      }
-    };
+    setUserPosts(response.data);
+    console.log(response.data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
     // Chame as funções para obter as tags e postagens quando o componente montar
-    getUserTags();
-    getFeedPosts();
-  }, [Token, userTags]); // Execute novamente quando o userId ou userTags mudar
+    if(Token){
+      getUserPosts();
+    }
+  }, []); // Execute novamente quando o userId ou userTags mudar
 
   return (
-    <div>
-      <h1>Feed do Usuário</h1>
-      <ul>
-        {feedPosts.map((post) => (
-          <li key={post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.content}</p>
-            <p>Tags: {post.tags.join(', ')}</p>
-          </li>
+    <main className='main'>
+      <div >
+        {userPosts.map((post, index) => (
+          <Post content={post} key={index}>
+            {post.textoPostagem}
+            {post.imagemUrlPostagem}
+          </Post>
         ))}
-      </ul>
-    </div>
+      </div>
+    </main>
   );
 };
 
