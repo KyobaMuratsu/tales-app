@@ -36,6 +36,8 @@ const Feed = () => {
       <div >
         {userPosts.map((post, index) => (
           <Post content={post} key={index}>
+            {post.userName}
+            {post.picUrl}
             {post.textoPostagem}
             {post.imagemUrlPostagem}
           </Post>

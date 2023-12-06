@@ -133,7 +133,7 @@ function UserConfig() {
                         >Inserir</button>
                         <div className='configs-span configs-tags'>
                             {tags.map((tag, index) => (
-                                <span key={index} className='tag-item'>
+                                <span key={index} className='tag-item tag-item2'>
                                     {tag}
                                     <button
                                         type="button"

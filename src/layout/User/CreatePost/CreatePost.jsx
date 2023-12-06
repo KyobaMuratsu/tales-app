@@ -98,12 +98,11 @@ function CreatePost(){
                     {image ? (<img src={URL.createObjectURL(image)} alt="" className='postpage-image-selected'></img>) : (<img src={ImagePlaceholder} alt="" className='postpage-image'></img>)}
                     </div>
                     <img src={TagsIcon} alt="" className='postpage-tag'></img>
-                    <div className="form">
                         <input
                             type="text"
                             name="tagCadastrar"
                             id="tag-cadastro"
-                            className="configs-textbox1"
+                            className="configs-textbox1 tags-textbox"
                             onChange={handleTagInputChange}
                             value={tagInput}
                         />
@@ -112,7 +111,7 @@ function CreatePost(){
                             type="button"
                             name="submitTag"
                             id="submit-tag"
-                            className="tag-button"
+                            className="add-tag-button"
                             onClick={handleAddTag}
                         >Inserir</button>
                         <div className='configs-span configs-tags'>
@@ -127,7 +126,6 @@ function CreatePost(){
                                     </button>
                                 </span>
                             ))}
-                        </div>
                     </div>
                 </div>
 

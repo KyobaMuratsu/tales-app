@@ -55,8 +55,8 @@ body {
 }
 
 .post-image {
-    height: 440px;
-    width: 440px;
+    height: fill;
+    width: fill;
     user-select: none;
     cursor: pointer;
     background-color: white;

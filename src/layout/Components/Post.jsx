@@ -4,16 +4,19 @@ import TextareaAutosize from 'react-textarea-autosize';
 
 function Post({content}) {
 
-    const imagem = content.imagemUrlPostagem;
-    const ImagemAcess = imagem.replace("C:\\Users\\bruno\\OneDrive\\Documentos\\projeto\\tales-app\\public\\Imagens", "");
+    const imagemPost = content.imagemUrlPostagem;
+    const ImagemPostAcess = imagemPost.replace("C:\\Users\\bruno\\OneDrive\\Documentos\\projeto\\tales-app\\public\\Imagens", "");
+
+    const imagemUser = content.picUrl;
+    const ImagemUserAccess = imagemUser.replace("C:\\Users\\bruno\\OneDrive\\Documentos\\projeto\\tales-app\\public\\Imagens", "");
 
     return(
     <div className="post-container">
                     <div className='userinfo-div'>
-                        {/* <img src={content.imagemUrlPostagem} alt="" className='userinfo-img'></img> */}
-                        {/* <a className='userinfo-username'>{props.user}</a> */}
+                        <img src={`/imagens/${ImagemUserAccess}`} alt="" className='userinfo-img'></img>
+                        <a className='userinfo-username'>{content.userName}</a>
                     </div>
-                    <img src={`/imagens/${ImagemAcess}`} alt="" className='post-image'></img>
+                    <img src={`/imagens/${ImagemPostAcess}`} alt="" className='post-image'></img>
                     <TextareaAutosize
                     maxLength="640"
                     type="text"
