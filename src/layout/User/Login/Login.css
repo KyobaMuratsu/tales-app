@@ -1,0 +1,156 @@
+body{
+    background-image: url('../../../assets/background_tales.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: 0.25rem solid #002B5B;
+    background-color: white;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 2% 1% 2%;
+    user-select: none;
+}
+
+.title{
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Lobster;
+    font-size: 2.438rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.5%; /* 85.595px */
+    letter-spacing: -0.017rem;
+    text-align: center;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 120%;
+    width: 100%;
+    gap: 5px;
+}
+
+.text{
+    text-align: center;
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px
+}
+
+.text-url{
+    text-align: center;
+    color: #002B5B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 161.5%; /* 32.3px */
+    letter-spacing: -0.1px
+}
+
+.textbox{
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    height: 30px;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    text-indent: 7px;
+    transition: .4s;
+}
+
+.textbox:focus{
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    height: 30px;
+    width: 90%;
+    align-content: center;
+}
+
+.logo-image{
+    padding: 2% 0 2% 0;
+    height: 45%;
+    width: 30%;
+    user-select: none;
+}
+
+.login-button{
+    background-color: var(--main-color);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 35px;
+    width: 60%;
+    border-radius: 5px;
+    transition: .4s;
+    
+}
+
+.login-button:hover{
+    background-color: var(--main-color-hover);
+    color: white;
+}
+
+.space{
+    height: 4px;
+}
+
+.google-login-button {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: #444;
+    width: 70%;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.google-text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.google-login-button-icon {
+    background: no-repeat;
+    width: 42px;
+    height: 42px;
+}

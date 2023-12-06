@@ -1,0 +1,332 @@
+*{
+    text-decoration: none;
+}
+
+body{
+    background-image: url('../assets/background_tales.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#root{
+    --vwhite: #f3ecec;
+    --speed: 0.2s;
+    --main-color: #002B5B;
+    --main-color-hover: #00418a;
+    --secondary-color: #159895;
+    --secondary-color-hover: #57C5B6;
+    --textbox-color: #D9D9D9;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homebar-hitbox {
+    position: sticky;
+    width: 100%;
+    height: 3.4rem;
+}
+
+.border{
+    position:fixed;
+    background-color: #002B5B;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    row-gap: 10px;
+    width: 100%;
+    height: 3.4rem;
+    box-shadow: 0px 1px 10px var(--main-color);
+}
+
+.homebarLeft{
+    width: 50%;
+    height: 3.4rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    user-select: none;
+}
+
+.homebarRight{
+    width: 50%;
+    height: 3.4rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    user-select: none;
+}
+
+.tales-icon{
+    padding-left: 1rem;
+    padding-right: 2rem;
+    width: 46px;
+    height: 46px;
+}
+
+.searchbar{
+    background-color: white;
+    border-radius: 10px;
+    height: 30px;
+    width: 30%;
+    transition: 0.4s;
+    text-align: left;
+    text-indent: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchbar:focus{
+    background-color: var(--vwhite);
+    height: 30px;
+    width: 45%;
+}
+
+.search-icon{
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+    width: 30px;
+    height: 30px;
+    opacity: 60%;
+    user-select: none;
+}
+
+.message-icon{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 36px;
+    height: 36px;
+    opacity: 30%;
+    transition: var(--speed);
+    user-select: none;
+}
+
+.message-icon:hover{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 36px;
+    height: 36px;
+    opacity: 30%;
+    transition: var(--speed);
+}
+
+.notif-icon{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 36px;
+    height: 36px;
+    transition: var(--speed);
+    cursor: pointer;
+}
+
+.notif-icon:hover{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 36px;
+    height: 36px;
+    opacity: 30%;
+    transition: var(--speed);
+}
+
+.menu-icon{
+    padding-left: 1rem;
+    padding-right: 10rem;
+    width: 36px;
+    height: 36px;
+    transition: var(--speed);
+    cursor: pointer;
+}
+
+.menu-icon:hover{
+    padding-left: 1rem;
+    padding-right: 10rem;
+    width: 36px;
+    height: 36px;
+    opacity: 30%;
+    transition: var(--speed);
+}
+
+.div-line{
+    background-color: #f3ecec;
+    width: 2px;
+    height: 80%;
+    opacity: 30%;
+}
+
+.h1{
+    color: grey;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h3{
+    padding-top: 8px;
+    padding-bottom: 4px;
+    text-align: center;
+    color: var(--main-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+}
+
+h3 span {
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 76px;
+    right: 124px;
+    background-color: var(--vwhite);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 200px;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 114px;
+    background-color: var(--vwhite);
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+}
+
+.dropdown-menu.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+}
+
+.dropdown-menu.inactive{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--speed) ease;
+}
+
+.dropdown-menu2 {
+    position: absolute;
+    top: 76px;
+    right: 54px;
+    background-color: var(--vwhite);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 200px;
+    content: row;
+}
+
+.dropdown-menu2::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 114px;
+    background-color: var(--vwhite);
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+}
+
+.dropdown-menu2.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+}
+
+.dropdown-menu2.inactive{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--speed) ease;
+}
+
+.dropdown-menu ul li{
+    padding: 20px 0;
+    border-top: 1px solid rgb(215, 215, 215);
+    border-radius: 2px;
+}
+
+.dropdown-menu2 ul li{
+    padding: 20px 0;
+    border-top: 1px solid rgb(215, 215, 215);
+    border-radius: 2px;
+}
+
+.dropdownItemNotification {
+    display: flex;
+    margin: 10px auto;
+    transition: var(--speed);
+    cursor: pointer;
+}
+
+.dropdownItemNotification:hover {
+    opacity: 0.5;
+}
+
+.dropdownItemNotification img {
+    max-width: 50px;
+    height: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.dropdownItemNotification a {
+    max-width: 100px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.dropdownItemProfile {
+    height: 20px;
+    display: flex;
+    margin: 4px auto;
+    transition: var(--speed);
+    cursor: pointer;
+}
+
+.dropdownItemProfile:hover {
+    opacity: 0.5;
+}
+
+.dropdownItemProfile img {
+    max-width: 35px;
+    height: 35px;
+    max-height: 35px;
+    margin-right: 2px;
+    transition: 0.5s;
+    margin-top: -5px;
+}
+
+.dropdownItemProfile a {
+    max-width: 100px;
+    margin-left: 20px;
+    margin-top: 5px;
+    transition: 0.5s;
+}

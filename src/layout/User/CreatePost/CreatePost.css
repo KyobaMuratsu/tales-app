@@ -1,0 +1,143 @@
+body{
+    background-image: url('../../../assets/background_tales.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+}
+
+.postpage-container{
+    background-color: var(--main-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 650px;
+    height: fit-content;
+    padding: 0 12px 12px 12px;
+    margin-top: 10%;
+    user-select: none;
+}
+
+.postpage-title{
+    color: var(--main-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Lobster;
+    font-weight: bold;
+    font-size: 2.8rem;
+    font-style: normal;
+    letter-spacing: -0.017rem;
+    height: 44px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+}
+
+.postpage-subtitle{
+    color: var(--main-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: -0.017rem;
+    text-align: center;
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.postpage-text{
+    color: var(--main-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.description-textbox{
+    background-color: white;
+    height: 150px;
+    width: fill;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .4s;
+    padding: 10px;
+    margin-top: 12px;
+    resize: none;
+    
+}
+
+.post-bar{
+    height: 40px;
+    width: fill;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.postpage-image-input {
+    background-color: var(--textbox-color);
+    height: 40px;
+    width: 400px;
+    user-select: none;
+    border-radius: 6px;
+    display: none;
+}
+
+.postpage-image {
+    height: 40px;
+    width: 40px;
+    user-select: none;
+    border-radius: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.postpage-image-selected {
+    height: 40px;
+    width: 40px;
+    user-select: none;
+    border-radius: 6px;
+    border: 1px dashed var(--textbox-color);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.postpage-tag {
+    height: 40px;
+    width: 40px;
+    user-select: none;
+    border-radius: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.postpage-button{
+    background-color: var(--secondary-color);
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 45px;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    
+}
+
+.postpage-button:hover{
+    background-color: var(--secondary-color-hover);
+    color: white;
+}
